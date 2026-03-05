@@ -14,7 +14,7 @@ RUN apk add --no-cache \
                             PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
 
                             COPY package*.json ./
-                            RUN npm ci --only=production
+                            RUN npm install --only=production
 
                             COPY . .
 
