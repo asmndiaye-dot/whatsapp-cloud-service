@@ -4,7 +4,7 @@
     "description": "Multi-tenant WhatsApp QR session service",
     "main": "src/index.js",
     "scripts": {
-          "start": "node src/index.js",
+              "start": "node src/routes/session.js",
           "dev": "nodemon src/index.js"
     },
     "dependencies": {
