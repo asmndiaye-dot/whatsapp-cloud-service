@@ -1,21 +1,20 @@
 {
-    "name": "whatsapp-cloud-service",
-    "version": "1.0.0",
-    "description": "Multi-tenant WhatsApp QR session service",
-    "main": "src/index.js",
-    "scripts": {
-              "start": "node src/routes/session.js",
-          "dev": "nodemon src/index.js"
-    },
-    "dependencies": {
-          "express": "^4.18.2",
-          "whatsapp-web.js": "^1.23.0",
-          "qrcode": "^1.5.3",
-          "redis": "^4.6.10",
-          "cors": "^2.8.5",
-          "dotenv": "^16.3.1"
-    },
-    "devDependencies": {
-          "nodemon": "^3.0.1"
-    }
+  "name": "whatsapp-cloud-service",
+  "version": "1.0.0",
+  "description": "Multi-tenant WhatsApp QR session service for Railway",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "whatsapp-web.js": "^1.23.0",
+    "qrcode": "^1.5.3",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
 }

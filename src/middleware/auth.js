@@ -1,9 +1,15 @@
 const authMiddleware = (req, res, next) => {
-    const apiSecret = req.headers['x-api-secret'];
-    if (!apiSecret || apiSecret !== process.env.API_SECRET) {
-          return res.status(401).json({ error: 'Unauthorized' });
-    }
-    next();
-};
+      const apiKey = req.headers['x-api-key'] || req.headers['x-api-secret'];
 
-module.exports = authMiddleware;
+        if (!apiKey || apiKey !== process.env.API_SECRET) {
+            return res.status(401).json({
+                  error: 'Unauthorized',
+                        message: 'Invalid or missing API key'
+                            });
+                              }
+
+                                next();
+                                };
+
+                                module.exports = authMiddleware;
+}
